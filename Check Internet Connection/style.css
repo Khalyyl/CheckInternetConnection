@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:wght@400;500;600display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+/* Popup container styles */
+.popup {
+    width: 400px;
+    border-radius: 5px;
+    padding: 20px;
+    visibility: hidden;
+    border-top: 3px solid rgb(213, 25, 25);
+    background: white;
+    margin: auto;
+    align-items: center;
+    transition: visibility 0.5s ease-in-out;
+}
+
+.popup.show {
+    visibility: visible;
+}
+
+.popup.online {
+    border-color: #2ecc71;
+}
+
+/* Icon styles */
+.popup .icon i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 50%;
+    background: rgb(213, 25, 25);
+}
+
+.popup.online .icon i {
+    background: #2ecc71;
+}
+
+/* Additional styles for popup content */
+.popup .details {
+    flex-grow: 1;
+}
+
+.popup .title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popup .desc {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.popup .reconnect {
+    background-color: rgb(213, 25, 25);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.popup .reconnect:hover {
+    background-color: darkred;
+}
+
+.popup.online .reconnect {
+    background: #bfbfbf;
+    pointer-events: none;
+}
